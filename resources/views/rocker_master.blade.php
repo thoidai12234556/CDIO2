@@ -22,6 +22,8 @@
         <div class="page-wrapper">
             <div class="page-content">
                 @yield('noi_dung')
+
+                {{-- Ảnh Bìa --}}
                 <div class="row">
                     <div class="card-body">
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -30,29 +32,31 @@
                                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true"></li>
                                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class=""></li>
                             </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img src="assets/images/gallery/26.png" class="d-block w-10" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>First slide label</h5>
-                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                    </div>
+
+                              <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="assets/images/gallery/1.png" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assets/images/gallery/2.png" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assets/images/gallery/3.png" class="d-block w-100" alt="...">
+                                  </div>
                                 </div>
-                                <div class="carousel-item active">
-                                    <img src="assets/images/gallery/27.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/images/gallery/28.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+
+
+
                             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </a>
@@ -62,14 +66,16 @@
                         </div>
                     </div>
                 </div>
+                {{-- Ảnh Bìa --}}
 
                 <div class="row">
+                    {{-- Bảng Xếp Hạng --}}
                     <div class="col-12 col-lg-3">
-						<div class="card">
+						<div class="card mt-4">
 							<div class="card-body">
-								<h5 class="my-3">Filter Recipes</h5>
+								<h5 class="my-3">Bảng Xếp Hạng</h5>
 								<div class="fm-menu">
-									<div class="list-group list-group-flush"> <a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-utensils me-2"></i><span>Diet</span></a>
+									{{-- <div class="list-group list-group-flush"> <a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-utensils me-2"></i><span>Diet</span></a>
 										<a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-hand-dots me-2"></i><span>Allergies</span></a>
 										<a href="javascript:;" class="list-group-item py-1"><i class="bx bx-analyse me-2"></i><span>Cusine</span></a>
 										<a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-bullseye me-2"></i><span>Goals</span></a>
@@ -78,13 +84,35 @@
 				                    <span>Documents</span></a>
 										<a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-wand-sparkles me-2"></i><span>Activeness</span></a>
                                         <a href="javascript:;" class="list-group-item py-1"><i class="fa-solid fa-calendar-days me-2"></i><span>Even</span></a>
-									</div>
+									</div> --}}
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Lượt thích</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">@username</th>
+                                            <td>10k</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">@username</th>
+                                            <td>12k</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">@username</th>
+                                            <td colspan="2">15k</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
 								</div>
 							</div>
 						</div>
 						<div class="card">
 							<div class="card-body">
-								<h5 class="mb-0 text-primary font-weight-bold">45.5 GB <span class="float-end text-secondary">50 GB</span></h5>
+								<h5 class="mb-0 text-primary font-weight-bold">5.5 GB <span class="float-end text-secondary">1 GB</span></h5>
 								<p class="mb-0 mt-2"><span class="text-secondary">Used</span><span class="float-end text-primary">Upgrade</span>
 								</p>
 								<div class="progress mt-3" style="height:7px;">
@@ -141,6 +169,9 @@
 							</div>
 						</div>
 					</div>
+                    {{-- Bảng Xếp Hạng --}}
+
+                    {{-- New dish --}}
                     <div class="col-12 col-lg-9">
                         <div class="page-content">
                             <div class="row">
@@ -210,6 +241,7 @@
                                 </div>
                             </div>
 
+                            {{-- Danh mục sp --}}
                             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 product-grid">
                                 <div class="col">
                                     <div class="card">
@@ -221,7 +253,7 @@
                                             <h6 class="card-title cursor-pointer">Abalone porridge</h6>
                                             <div class="clearfix">
                                                 <i class="fa-regular fa-clock">30 minitue</i>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -246,7 +278,7 @@
                                             <h6 class="card-title cursor-pointer">Mix salad</h6>
                                             <div class="clearfix">
                                                 <i class="fa-regular fa-clock">30 minitue</i>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -271,7 +303,7 @@
                                             <h6 class="card-title cursor-pointer">Steak</h6>
                                             <div class="clearfix">
                                                 <i class="fa-regular fa-clock">30 minitue</i>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -296,7 +328,7 @@
                                             <h6 class="card-title cursor-pointer">Pasta</h6>
                                             <div class="clearfix">
                                                 <i class="fa-regular fa-clock">30 minitue</i>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -321,7 +353,7 @@
                                             <h6 class="card-title cursor-pointer">Fried shrimp</h6>
                                             <div class="clearfix">
                                                 <i class="fa-regular fa-clock">30 minitue</i>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -346,7 +378,7 @@
                                             <h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
                                             <div class="clearfix">
                                                 <p class="mb-0 float-start"><strong>134</strong> Sales</p>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -371,7 +403,7 @@
                                             <h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
                                             <div class="clearfix">
                                                 <p class="mb-0 float-start"><strong>134</strong> Sales</p>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -396,7 +428,7 @@
                                             <h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
                                             <div class="clearfix">
                                                 <p class="mb-0 float-start"><strong>134</strong> Sales</p>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -421,7 +453,7 @@
                                             <h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
                                             <div class="clearfix">
                                                 <p class="mb-0 float-start"><strong>134</strong> Sales</p>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -446,7 +478,7 @@
                                             <h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
                                             <div class="clearfix">
                                                 <p class="mb-0 float-start"><strong>134</strong> Sales</p>
-                                                <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p>
+                                                {{-- <p class="mb-0 float-end fw-bold"><span class="me-2 text-decoration-line-through text-secondary">$350</span><span>$240</span></p> --}}
                                             </div>
                                             <div class="d-flex align-items-center mt-3 fs-6">
                                               <div class="cursor-pointer">
@@ -461,9 +493,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end row-->
+                            </div>
+                            {{-- Danh mục sp --}}
+
                         </div>
                     </div>
+                    {{-- New dish --}}
+
                 </div>
 
             </div>
